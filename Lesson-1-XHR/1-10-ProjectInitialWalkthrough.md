@@ -37,6 +37,7 @@ To complete these final steps, you'll need accounts with [Unsplash](https://unsp
 
 In our app, the variable `searchedForText` contains the text we're interested in, and we'll set the onload property to a function called addImage (which is a do-nothing function that we'll flesh out in a moment). If we temporarily set `searchedForText` to "hippos", the code for the XHR call to Unsplash is:
 
+```js
 function addImage(){}
 const searchedForText = 'hippos';
 const unsplashRequest = new XMLHttpRequest();
@@ -45,15 +46,15 @@ unsplashRequest.open('GET', `https://api.unsplash.com/search/photos?page=1&query
 unsplashRequest.onload = addImage;
 
 unsplashRequest.send()
+```
+
 ...but if you try running this code, you'll get an error.
-QUIZ QUESTION
 
-The request for Unsplash doesn''t work because it needs an HTTP header to be sent along. What is the XHR method to add a header to the request? Check out the documentation for help!
+### QUIZ QUESTION
 
-.includeRequestHeader()
+The request for Unsplash doesn't work because it needs an HTTP header to be sent along. What is the XHR method to add a header to the request? Check out [the documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) for help!
 
-.addHeader()
-
-.setRequestHeader()
-
-.sendHeader()
+- [ ] `.includeRequestHeader()`
+- [ ] `.addHeader()`
+- [X] `.setRequestHeader()`
+- [ ] `.sendHeader()`
