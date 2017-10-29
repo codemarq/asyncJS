@@ -18,15 +18,17 @@ asyncRequestObject.send();
 
 ## APIs and JSON
 
-Getting the HTML of a website is ok, but it's probably not very useful. The data it returns is in a format that is extremely difficult to parse and consume. It would be a lot easier if we could get just the data we want in an easily formatted data structure. If you're thinking that JSON would be a good idea, then you're right and I'll give you a piece of my cake!
+Getting the HTML of a website is ok, but it's probably not very useful. The data it returns is in a format that is extremely difficult to parse and consume. It would be a lot easier if we could get just the data we want in an easily formatted data structure. If you're thinking that `JSON` would be a good idea, then you're right and I'll give you a piece of my cake!
 
 Instead of requesting the base URL for Unsplash, let's create an app that pulls an image from Unsplash's API and relevant articles from the New York Times.
 
-When making a request from an API that returns JSON, all we need to do is convert that JSON response into a JavaScript object. We can do that with JSON.parse();. Let's tweak the onload function to handle a JSON response:
+When making a request from an API that returns `JSON`, all we need to do is convert that `JSON` response into a JavaScript object. We can do that with `JSON.parse();`. Let's tweak the `onload` function to handle a `JSON` response:
 
+```js
 function handleSuccess () {
 const data = JSON.parse( this.responseText ); // convert data from JSON to a JavaScript object
 console.log( data );
 }
 
 asyncRequestObject.onload = handleSuccess;
+```
