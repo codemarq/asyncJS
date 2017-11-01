@@ -33,14 +33,14 @@ Remember that Unsplash requires an Authorization header to make a request throug
 
 Docs are a dev's best friend! Take a quick look through them and pick the correct way(s) to add a header to a Fetch request from the options below. Also, instead of cheating and guessing, try testing out the code you think is correct in your app or on the console to see how it runs!
 
-- [ ]
+1. [ ]
 
 ```js
 fetch.setRequestHeader('Authorization', 'Client-ID abc123');
-fetch(https://api.unsplash.com/search/photos?page=1&query=${searchedForText});
+fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`);
 ```
 
-- [ ]
+2. [x]
 
 ```js
 fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`, {
@@ -50,7 +50,7 @@ fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`, 
 });
 ```
 
-- [ ]
+3. [x]
 
 ```js
 const requestHeaders = new Headers();
@@ -60,7 +60,7 @@ fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`, 
 });
 ```
 
-- [ ]
+4. [ ]
 
 ```js
 fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`).then(function(request){
@@ -77,14 +77,14 @@ Check out these links from the specification to find out more:
 - [https://fetch.spec.whatwg.org/#methods](https://fetch.spec.whatwg.org/#methods)
 - [https://fetch.spec.whatwg.org/#requests](https://fetch.spec.whatwg.org/#requests)
 
-- [ ] FETCH
-- [ ] fetch
-- [ ] POST
-- [ ] post
-- [X] GET
-- [ ] get
-- [ ] REQUEST
-- [ ] request
+> - [ ] FETCH
+> - [ ] fetch
+> - [ ] POST
+> - [ ] post
+> - [X] GET
+> - [ ] get
+> - [ ] REQUEST
+> - [ ] request
 
 ## Changing The HTTP Method
 
